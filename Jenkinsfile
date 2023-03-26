@@ -37,11 +37,7 @@ pipeline {
                  sh 'echo "Artifact construction is processing ...."'
                  sh 'mvn  package -DskipTests'
               }
-           	  post {
-           	     success {
-           	       archiveArtifacts artifacts: 'target/*.jar'
-           	     }
-              }
+
            }
            stage('Junit Testing') {
               steps{
