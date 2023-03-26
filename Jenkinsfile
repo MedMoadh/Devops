@@ -26,12 +26,12 @@ pipeline {
               }
 
         }
-           stage('Clean install') {
+           /*stage('Clean install') {
               steps {
                  sh 'echo "Clean the Project is processing ...."'
                 sh 'mvn clean install -DskipTests'
               }
-           }
+           }*/
            stage ('Artifact construction') {
               steps {
                  sh 'echo "Artifact construction is processing ...."'
