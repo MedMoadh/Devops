@@ -45,6 +45,7 @@ public class Fournisseur implements Serializable {
     @OneToOne(cascade= CascadeType.ALL,fetch=FetchType.EAGER)
     private DetailFournisseur detailFournisseur;
     
-//added first 
+//added first
+//added for new branch
 	
 }

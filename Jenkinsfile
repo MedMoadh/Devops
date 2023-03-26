@@ -11,7 +11,8 @@ pipeline {
     stage ('Checkout GIT') {
             steps {
                echo 'Pulling...';
-               git branch : 'https://github.com/maynef/Devops.git';
+               git branch : 'main',
+               url : 'https://github.com/maynef/Devops.git';
 
             }
         }
