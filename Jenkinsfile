@@ -46,5 +46,19 @@ pipeline {
               }
            }
   }
+  post {
+          success {
+               mail to: "maysa.nefzi@esprit.tn",
+                      subject: "Build sucess",
+                      body: "sucess"
+              echo 'successful'
+          }
+          failure {
+               mail to: "maysa.nefzi@esprit.tn",
+                      subject: "Build failed",
+                      body: "failed"
+              echo 'failed'
+          }
+        }
 
 }
