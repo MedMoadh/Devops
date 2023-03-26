@@ -29,13 +29,13 @@ pipeline {
            stage('Clean install') {
               steps {
                  sh 'echo "Clean the Project is processing ...."'
-                sh 'mvn clean install -Dmaven.test.skip=true'
+                sh 'mvn clean install -DskipTests'
               }
            }
            stage ('Artifact construction') {
               steps {
                  sh 'echo "Artifact construction is processing ...."'
-                 sh 'mvn  package -Dmaven.test.skip=true'
+                 sh 'mvn  package -DskipTests'
               }
            	  post {
            	     success {
