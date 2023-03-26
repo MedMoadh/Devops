@@ -29,7 +29,7 @@ pipeline {
            stage('Clean install') {
               steps {
                  sh 'echo "Clean the Project is processing ...."'
-                sh 'mvn clean install -Dmaven.test.skip=true '
+                sh 'mvn clean install -Dmaven.test.skip=true'
               }
            }
            stage ('Artifact construction') {
