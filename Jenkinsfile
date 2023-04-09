@@ -45,6 +45,15 @@ pipeline {
                   sh 'mvn  test'
               }
            }
+           stage('Sonar Check'){
+              steps{
+                 script{
+           			withSonarQubeEnv('sonar') {
+           			   sh "mvn compile sonar:sonar"
+                    }
+           		 }
+              }
+           }
   }
   post {
           success {
