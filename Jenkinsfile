@@ -49,9 +49,9 @@ pipeline {
               steps{
                  script{
            			withSonarQubeEnv('sonar') {
-           			   //sh "mvn compile sonar:sonar"
-           			   sh "mvn sonar:sonar -Dsonar.login=achat"
+           			   sh "mvn compile sonar:sonar"
                     }
+                    sh "mvn clean install"
            		 }
               }
            }
