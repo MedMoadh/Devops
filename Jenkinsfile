@@ -51,7 +51,7 @@ pipeline {
            			withSonarQubeEnv('sonar') {
            			   sh "mvn compile sonar:sonar"
                     }
-                    sh "mvn clean install"
+                    //sh "mvn clean install"
            		 }
               }
            }
