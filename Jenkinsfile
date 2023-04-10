@@ -9,7 +9,7 @@ pipeline {
             steps {
                echo 'Pulling...';
                git branch : 'maysa_branch',
-               url : 'https://github.com/maynef/Devops/tree/maysa_branch';
+               url : 'https://github.com/maynef/Devops.git';
 
             }
         }
