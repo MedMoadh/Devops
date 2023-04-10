@@ -8,7 +8,7 @@ pipeline {
     stage ('Checkout GIT') {
             steps {
                echo 'Pulling...';
-               git branch : 'main',
+               git branch : 'maysa_branch',
                url : 'https://github.com/maynef/Devops.git';
 
             }
@@ -53,6 +53,11 @@ pipeline {
                     }
                     //sh "mvn clean install"
            		 }
+              }
+           }
+           stage("Publish to Nexus Repo_Man") {
+              steps {
+                 sh 'mvn deploy -DskipTests'
               }
            }
   }
