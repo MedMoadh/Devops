@@ -57,7 +57,7 @@ pipeline {
            }
            stage("Publish to Nexus Repo_Man") {
               steps {
-                 sh "mvn clean install"
+
                  sh 'mvn deploy -DskipTests'
               }
 
