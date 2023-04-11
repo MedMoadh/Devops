@@ -61,19 +61,19 @@ pipeline {
               }
            }
   }
-  post {
+  /*post {
           success {
                mail to: "nefzimaysa27@gmail.com",
                       subject: "Build sucess",
                       body: "sucess"
               echo 'successful'
           }
-          failure {
+         failure {
                mail to: "nefzimaysa27@gmail.com",
                       subject: "Build failed",
                       body: "failed"
               echo 'failed'
           }
-        }
+        }*/
 
 }
