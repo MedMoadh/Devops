@@ -1,14 +1,14 @@
 pipeline {
   
   agent any
-  environment {
+  /*environment {
           //DOCKERHUB_CREDENTIALS = credentials('DockerHubID')
           NEXUS_VERSION = "nexus3"
           NEXUS_PROTOCOL = "http"
           NEXUS_URL = "172.10.0.140/:8081"
           NEXUS_REPOSITORY = "java-app"
           NEXUS_CREDENTIAL_ID = "nexus_credentials"
-      }
+      }*/
 
 
   stages {
@@ -63,14 +63,14 @@ pipeline {
            		 }
               }
            }
-           /*stage("Publish to Nexus Repo_Man") {
+           stage("Publish to Nexus Repo_Man") {
               steps {
 
                  sh 'mvn deploy -DskipTests'
               }
 
-           }*/
-           stage("Publish to Nexus Repository Manager") {
+           }
+           /*stage("Publish to Nexus Repository Manager") {
                        steps {
                            script {
                                pom = readMavenPom file: "pom.xml";
@@ -107,7 +107,7 @@ pipeline {
                    }
 
            }
-  }
+  }*/
   /*post {
           success {
                mail to: "nefzimaysa27@gmail.com",
