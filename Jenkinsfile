@@ -63,13 +63,13 @@ pipeline {
            		 }
               }
            }
-           stage("Publish to Nexus Repo_Man") {
+           /*stage("Publish to Nexus Repo_Man") {
               steps {
 
                  sh 'mvn deploy -DskipTests'
               }
 
-           }
+           }*/
 
            stage("Publish to Nexus Repository Manager") {
                        steps {
