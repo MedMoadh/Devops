@@ -74,6 +74,13 @@
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>java-app</id>
+			<name>Nexus repository</name>
+			<url>http://172.10.0.140:8081/repository/java-app/</url>
+		</repository>
+	</distributionManagement>
 
 	<build>
 		<plugins>
@@ -157,6 +164,7 @@
 			</plugin>
 
 		</plugins>
+
 	</build>
 
 </project>
