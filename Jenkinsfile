@@ -49,7 +49,7 @@ pipeline {
               steps{
                  script{
            			withSonarQubeEnv('sonar') {
-           			   sh "mvn compile sonar:sonar"
+           			   sh "mvn compile sonar:sonar -Dsonar.login=admin -Dsonar.password=maysa"
                     }
                     //sh "mvn clean install"
            		 }
