@@ -3,7 +3,7 @@ pipeline {
   agent any
 
  environment {
-         //DOCKERHUB_CREDENTIALS = credentials('DockerHubID')
+         DOCKERHUB_CREDENTIALS = credentials('DockerHubID')
          NEXUS_VERSION = "nexus3"
          NEXUS_PROTOCOL = "http"
          NEXUS_URL = "172.10.0.140:8081/"
@@ -106,6 +106,42 @@ pipeline {
                            }
                        }
                    }
+
+
+                    stage('Docker build') {
+                       	agent any
+                         steps {
+                           sh 'echo "Docker is building ...."'
+                         	sh 'docker build -t $DOCKERHUB_CREDENTIALS_USR/devops_project .'
+                         }
+                     }
+
+
+                       stage('Docker login') {
+                       	agent any
+                         steps {
+                           sh 'echo "login Docker ...."'
+                         	sh 'docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
+                         }
+                       }
+
+
+                       stage('Docker push') {
+                       	agent any
+                         steps {
+                           sh 'echo "Docker is pushing ...."'
+                   	   sh 'docker push $DOCKERHUB_CREDENTIALS_USR/devops_project'
+
+                         }
+                       }
+
+
+                       stage('docker check containers') {
+                         steps {
+
+                           sh 'docker ps'
+                         }
+                       }
 
 
 
