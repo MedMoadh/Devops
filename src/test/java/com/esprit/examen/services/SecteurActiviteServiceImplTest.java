@@ -35,7 +35,7 @@ public class SecteurActiviteServiceImplTest {
     public void testMajVerif    () {
         for (SecteurActivite s : secteurActiviteService.retrieveAllSecteurActivite())
         {
-            assertEquals(s.getCodeSecteurActivite().substring(0,1),"t");
+            assertEquals("t",s.getCodeSecteurActivite().substring(0,1));
         }
     }
     @Test
