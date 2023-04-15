@@ -20,7 +20,7 @@ pipeline {
     }
     stage('Testing MVN') {
       steps {
-        sh """mvn -version"""
+        sh 'mvn -version'
       }
     }
     stage('Cleaning the Project') {
