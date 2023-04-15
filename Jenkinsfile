@@ -128,6 +128,7 @@ pipeline {
                            sh 'docker ps'
                          }
                        }
+                       }
   post {
           success {
                mail to: "nefzimaysa27@gmail.com",
@@ -142,5 +143,5 @@ pipeline {
               echo 'failed'
           }
         }
-}
+
 }
