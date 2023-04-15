@@ -49,7 +49,7 @@ pipeline {
                   sh 'mvn  test'
               }
            }*/
-           }
+           
            /*
            stage('Sonar Check'){
               steps{
