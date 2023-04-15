@@ -4,11 +4,11 @@ pipeline {
   agent any
  environment {
          DOCKERHUB_CREDENTIALS = credentials('DockerHubID')
-         //NEXUS_VERSION = "nexus3"
-         //NEXUS_PROTOCOL = "http"
-         //NEXUS_URL = "172.10.0.140:8081/"
-         //NEXUS_REPOSITORY = "java-app"
-         //NEXUS_CREDENTIAL_ID = "nexus_credentials"
+         NEXUS_VERSION = "nexus3"
+         NEXUS_PROTOCOL = "http"
+         NEXUS_URL = "172.10.0.140:8081/"
+         NEXUS_REPOSITORY = "java-app"
+         NEXUS_CREDENTIAL_ID = "nexus_credentials"
      }
   stages {
     stage ('Checkout GIT') {
@@ -65,7 +65,7 @@ pipeline {
                  sh 'mvn deploy -DskipTests'
               }
            }*/
-/*
+
            stage("Publish to Nexus Repository Manager") {
                        steps {
                            script {
@@ -101,7 +101,7 @@ pipeline {
                            }
                        }
                    }
-                   */
+                   /*
                     stage('Docker build') {
                        	agent any
                          steps {
