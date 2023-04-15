@@ -41,13 +41,13 @@ pipeline {
         sh 'mvn  package -DskipTests'
       }
     }
-    /*stage('Junit Testing') {
+    stage('Junit Testing') {
       steps {
         sh 'echo "Junit Test is processing ...."'
         sh 'mvn  test'
       }
-    }*/
-    stage('Sonar Check') {
+    }
+    /*stage('Sonar Check') {
       steps {
         script {
           withSonarQubeEnv('sonar') {
@@ -55,7 +55,7 @@ pipeline {
           }
         }
       }
-    }
+    }*/
     stage("Publish to Nexus Repository Manager") {
       steps {
         script {
