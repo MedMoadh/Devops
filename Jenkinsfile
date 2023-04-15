@@ -106,7 +106,7 @@ pipeline {
                                }
                            }
                        }
-                   }
+           }
 
 
 
@@ -144,7 +144,8 @@ pipeline {
                            sh 'docker ps'
                          }
                        }
-                       }
+}
+
 
 
 
@@ -163,7 +164,7 @@ pipeline {
                       body: "failed"
               echo 'failed'
           }
-        }
+ }
 
 }
-}
+
