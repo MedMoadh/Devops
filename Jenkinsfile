@@ -15,7 +15,7 @@ pipeline {
             steps {
                echo 'Pulling...';
                git branch : 'moadh',
-               url : 'https://github.com/YosraTlili/DevOps.git';
+               url : 'https://github.com/MedMoadh/Devops.git';
             }
         }
         stage ('Testing MVN') {
