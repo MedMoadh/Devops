@@ -14,8 +14,8 @@ pipeline {
     stage ('Checkout GIT') {
             steps {
                echo 'Pulling...';
-               git branch : 'maysa_branch',
-               url : 'https://github.com/maynef/Devops.git';
+               git branch : 'moadh',
+               url : 'https://github.com/YosraTlili/DevOps.git';
             }
         }
         stage ('Testing MVN') {
@@ -131,13 +131,13 @@ pipeline {
                        }
   post {
           success {
-               mail to: "nefzimaysa27@gmail.com",
+               mail to: "medmoadhattia@gmail.com",
                       subject: "Build sucess",
                       body: "sucess"
               echo 'successful'
           }
          failure {
-               mail to: "nefzimaysa27@gmail.com",
+               mail to: "medmoadhattia@gmail.com",
                       subject: "Build failed",
                       body: "failed"
               echo 'failed'
