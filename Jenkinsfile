@@ -57,6 +57,7 @@ pipeline {
            			   sh "mvn compile sonar:sonar -Dsonar.login=admin -Dsonar.password=maysa"
                     }
                     //sh "mvn clean install"
+
            		 }
               }
            }
