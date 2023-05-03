@@ -114,14 +114,14 @@ pipeline {
                        	agent any
                          steps {
                            sh 'echo "login Docker ...."'
-                         	//sh 'docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
+                         	sh 'docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
                          }
                        }
                        stage('Docker push') {
                        	agent any
                          steps {
                            sh 'echo "Docker is pushing ...."'
-                   	   //sh 'docker push $DOCKERHUB_CREDENTIALS_USR/devops_project'
+                   	   sh 'docker push $DOCKERHUB_CREDENTIALS_USR/devops_project'
                          }
                        }
                        stage('docker check containers') {
